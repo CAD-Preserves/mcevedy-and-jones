@@ -1,0 +1,93 @@
+{
+  // -- Rendering and Optical Density Normalisation --
+  "render": {
+    "background_blur_sigma": 15.0,
+    "background_dilate_px": 51,
+    "dpi": 300,
+    "right_page_x_start_ratio": 0.5
+  },
+
+  // -- Non-Continuous X-Axis Geometry and Grid Calibration --
+  "x_axis": {
+    "column_count": 23,
+    "column_years": [
+      -400, -200, 0, 200, 400, 600, 800,
+      1000, 1100, 1200, 1300, 1400,
+      1500, 1550, 1600, 1650, 1700, 1750, 1800, 1850, 1900, 1950, 2000
+    ],
+    "end_year_cap": 1975,
+    "pitch_search_max_px": 50.4,
+    "pitch_search_min_px": 49.4,
+    "pitch_search_steps": 51,
+    "scale_breaks": [
+      { "col_end": 7, "col_start": 0, "year_end": 1000, "year_start": -400, "years_per_col": 200 },
+      { "col_end": 12, "col_start": 7, "year_end": 1500, "year_start": 1000, "years_per_col": 100 },
+      { "col_end": 21, "col_start": 12, "year_end": 1950, "year_start": 1500, "years_per_col": 50 },
+      { "col_end": 21.5, "col_start": 21, "year_end": 1975, "year_start": 1950, "years_per_col": 50 }
+    ],
+    "special_bracket_cols": [19.5, 20.5],
+    "thick_vertical_cols": [0, 7, 12, 22],
+    "x0_search_max_px": 355,
+    "x0_search_min_px": 165
+  },
+
+  // -- Y-Axis Grid Mesh Calibration --
+  "y_axis": {
+    "row_count": 35,
+    "y0_search_max_px": 255,
+    "y0_search_min_px": 105
+  },
+
+  // -- Morphological Template Subtraction, Glyph Filtering and Viterbi Seam --
+  "extraction": {
+    "air_ink_threshold": 75.0,
+    "air_ink_threshold_vgrid": 155.0,
+    "baseline_subtract_scale": 1.35,
+    "binary_component_threshold": 115.0,
+    "curve_min_height_px": 35,
+    "curve_min_width_px": 25,
+    "dot_bonus_od": 40.0,
+    "dot_flank_min_od": 55.0,
+    "dot_min_area_px": 5,
+    "dot_rescue_radius_px": 6.5,
+    "endpoint_1975_search_px": 26,
+    "glyph_eroded_max_height_px": 27,
+    "glyph_eroded_max_width_px": 52,
+    "glyph_max_height_px": 95,
+    "glyph_max_width_px": 62,
+    "grid_percentile": 65.0,
+    "grid_percentile_vert": 65.0,
+    "grid_subtract_scale": 1.25,
+    "grid_subtract_scale_vert": 1.25,
+    "knockout_half_width_px": 16.0,
+    "map_border_horiz_min_od": 132.0,
+    "map_border_horiz_p20_min_od": 110.0,
+    "map_grid_contrast_min": 35.0,
+    "minkowski_max_excursion_px": 180.0,
+    "minkowski_min_excursion_px": 6.0,
+    "minkowski_min_run_px": 15,
+    "pen_radius_px": 2.4,
+    "slope_chord_base_px": 6.0,
+    "slope_chord_factor": 3.0,
+    "solid_ink_margin_od": 48.0,
+    "solid_ink_min_od": 175.0,
+    "thick_bridge_min_od": 80.0,
+    "viterbi_air_beta": 9.0,
+    "viterbi_air_beta_knockout": 3.0,
+    "viterbi_air_gamma": 1.6,
+    "viterbi_air_gamma_knockout": 0.25,
+    "viterbi_air_self_penalty": -50.0,
+    "viterbi_max_step_px": 95,
+    "viterbi_step_alpha": 0.07
+  },
+
+  // -- Output Formatting --
+  "output": {
+    "catalogue_path": "common/digitisation/chart_catalogue.json5",
+    "output_path": "output/mcevedy_data.json",
+    "pdf_path": "mcevedy_and_jones.pdf",
+    "reference_json_path": "mcevedy_data.json",
+    "rounding_decimals_chart": 4,
+    "rounding_decimals_micro": 5
+  }
+}
